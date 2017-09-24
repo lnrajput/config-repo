@@ -16,8 +16,7 @@ logging:
     org.springframework.retry.support.RetryTemplate: DEBUG
 
     # Set INFO to see the allocated port
-    org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer: INFO
-    org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer: INFO
+    org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer: INFO   
 
 eureka:
   client:
@@ -54,7 +53,7 @@ eureka:
     hostname: monitor
   client:
     serviceUrl:
-      defaultZone: http://discovery:8761/eureka/
+      defaultZone: http://discovery:8765/eureka/
 
 ---
 # For deployment in Cloud Foundry

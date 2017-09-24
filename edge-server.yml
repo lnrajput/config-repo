@@ -66,7 +66,7 @@ zuul:
 logging:
   level:
     ROOT: WARN
-    se.callista: INFO
+    com.acc.ms: INFO
 
     # Set DEBUG level to activate our log-filter to log each request and response
     org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
@@ -76,8 +76,7 @@ logging:
     org.springframework.retry.support.RetryTemplate: DEBUG
 
     # Set INFO to see the allocated port
-    org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer: INFO
-    org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainer: INFO
+    org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer: INFO   
 
     # Set DEBUG level on Hystrix to get an error message when a fallback method is used.
     com.netflix.hystrix: DEBUG
@@ -102,7 +101,7 @@ eureka:
     preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://discovery:8761/eureka/
+      defaultZone: http://discovery:8765/eureka/
 
 ---
 # For deployment in Cloud Foundry
